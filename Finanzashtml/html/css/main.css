@@ -1,0 +1,343 @@
+@charset "utf-8";
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  padding-bottom: 75px;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  flex-direction: column;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+div, li {
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.section_inner {
+  padding: 50px 10% 30px;
+}
+
+.key {
+  height: 500px;
+  background: center / cover no-repeat url("../images/finance_logo.jpg");
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: lighter;
+}
+
+.key h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  padding: 100px 0 0;
+}
+
+.key p {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0 0 50px;
+}
+
+.section_fondo {
+  background: url('../images/fondo.jpg');
+  padding: 45px 10% 30px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.key h1 {
+  font-size: 2.5rem;
+  padding-top: 170px;
+}
+
+.present_title {
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.section_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: lighter;
+}
+
+.section_1 p {
+  width: 60%;
+  margin-right: 20px;
+  text-align: left;
+  font-size: x-large;
+}
+
+.imagen_derecha {
+  width: 40%;  /* Puedes ajustar este valor para hacer la imagen más pequeña o más grande */
+  height: auto; /* Mantener la proporción original de la imagen */
+  margin-left: 100px;
+}
+
+.section_title {
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+
+.menu_title {
+  display: inline-block;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: left;
+}
+
+button {
+  font-size: 17px;
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  background: dodgerblue;
+  color: white;
+  border-radius: 4px;
+  margin-top: 5px;
+  width: 120px;
+  align-items: center;
+  text-align: center;
+}
+
+button:hover {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+button:active {
+  transform: translate(0em, 0.2em);
+}
+
+.inputGroup {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 1em 0 1em 0;
+  max-width: 500px;
+  position: relative;
+  padding-right: 90px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 40px;
+  align-items: center;
+  text-align: center;
+  background: white;
+}
+
+.inputGroup input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.inputGroup label {
+  font-size: 100%;
+  
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+.inputGroup :is(input:focus, input:valid) ~ label {
+  transform: translateY(-50%) scale(.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: #e8e8e8;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: rgb(150, 150, 200);
+}
+.historySection{
+  font-family: 'Times New Roman', Times, serif;
+}
+.historySection h2{
+  color: #f0f0f0;
+}
+
+
+.entrada {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+
+.textoEntrada {
+  flex-grow: 1;
+  cursor: pointer;
+  word-wrap: break-word;
+  max-width: 80%;
+  white-space: pre-wrap;
+}
+
+.textoEntrada input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #f0f0f0;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.textoEntrada input:focus {
+  outline: none;
+  border: 2px solid #5c9dff;
+}
+
+.entrada button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.entrada button:hover {
+  background: #c0392b;
+}
+
+.section_menu {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1000px;
+  max-height: 300px;
+}
+
+.section_menu ul li .imag_menu {
+  width: 55%;
+}
+
+.section_menu ul li .texto_menu {
+  width: 49%;
+  padding: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 13px;
+}
+
+.section_menu ul li {
+  background-color: white;
+  display: flex;
+}
+
+.section_menu ul {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section_menu ul li img {
+  width: 100%;
+  height: 100%;
+}
+/* Sección de contacto social */
+.contact_social {
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.contact_social h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilos de los botones */
+.social_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social_button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.social_button i {
+  margin-right: 10px;
+}
+
+/* Colores y estilos específicos de cada red social */
+.social_button.facebook {
+  background-color: #3b5998;
+}
+
+.social_button.twitter {
+  background-color: #1da1f2;
+}
+
+.social_button.instagram {
+  background-color: #e4405f;
+}
+
+.social_button.linkedin {
+  background-color: #0077b5;
+}
+
+/* Efecto hover */
+.social_button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

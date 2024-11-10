@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Proyecto</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="key section_inner">
+      <h1>FINANZAS</h1>
+      <p>Verifica tus datos, rápido, sencillo y fácil</p>
+    </div>
+  </header>
+
+  <article class="section_inner">
+    <div class="present_title">
+      <h1>¿Quiénes somos?</h1>
+      <p>Conoce un poco más de nosotros</p>
+    </div>
+    <div class="section_1">
+      <p>
+        Somos una entidad encargada de ayudar a nuestros usuarios a gestionar sus ingresos y gastos para un mayor control sobre su economía.<br>
+        Con nuestra interfaz sencilla de manejar, el usuario puede operar con facilidad y sin problemas.
+      </p>
+      <img src="images/imagen5V.jpg" alt="Descripción de la imagen" class="imagen_derecha">
+    </div>
+  </article>
+  
+  <section class="section_fondo">
+    <div class="section_inner">
+      <h1 class="section_title" id="start">Empecemos</h1>
+    </div>
+    <div class="recommended_menu">
+      <div class="center">
+        <h1 class="menu_title">Comienza a registrar tus datos</h1>
+      </div>
+
+      <!-- Sección de ingreso de datos -->
+      <div class="inputSection">
+        <div class="inputGroup">
+          <label for="entrada">Ingreso de Movimiento:</label>
+          <input type="text" id="entrada" placeholder="Escribe el movimiento">
+          <button onclick="guardarMovimiento()">Guardar</button>
+        </div>
+      </div>
+
+      <!-- Sección para mostrar el historial de movimientos -->
+      <div class="historySection">
+        <h2>Historial de Movimientos</h2>
+        <div id="historial">
+          <!-- Aquí se agregarán los movimientos -->
+        </div>
+      </div>
+
+      <!-- Sección del card -->
+      <div class="cardSection">
+        <div class="card" id="resultado">
+          <!-- Este es el contenedor donde se acumularán los datos ingresados -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    // Función para guardar el movimiento ingresado
+    function guardarMovimiento() {
+      const input = document.getElementById("entrada");
+      const movimiento = input.value.trim();
+
+      if (movimiento) {
+        // Agregar el movimiento al historial
+        const nuevoMovimiento = document.createElement("div");
+        nuevoMovimiento.classList.add("entrada");
+
+        // Crear un elemento de texto para mostrar el movimiento
+        const texto = document.createElement("span");
+        texto.classList.add("textoEntrada");
+        texto.textContent = movimiento;
+
+        // Crear un botón para eliminar el movimiento
+        const eliminarBtn = document.createElement("button");
+        eliminarBtn.textContent = "Eliminar";
+        eliminarBtn.onclick = function() {
+          nuevoMovimiento.remove();
+        };
+
+        // Agregar los elementos al contenedor del historial
+        nuevoMovimiento.appendChild(texto);
+        nuevoMovimiento.appendChild(eliminarBtn);
+
+        // Añadir el movimiento al historial
+        document.getElementById("historial").appendChild(nuevoMovimiento);
+
+        // Limpiar el input
+        input.value = "";
+      } else {
+        alert("Por favor ingrese un movimiento.");
+      }
+    }
+  </script>
+  <section class="contact_social">
+    <h2>¡Conéctate con nosotros!</h2>
+    <div class="social_buttons">
+      <a href="https://www.facebook.com" class="social_button facebook" target="_blank">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://www.twitter.com" class="social_button twitter" target="_blank">
+        <i class="fab fa-twitter"></i> Twitter
+      </a>
+      <a href="https://www.instagram.com" class="social_button instagram" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.linkedin.com" class="social_button linkedin" target="_blank">
+        <i class="fab fa-linkedin-in"></i> LinkedIn
+      </a>
+    </div>
+  </section>
+  
+</body>
+</html>
